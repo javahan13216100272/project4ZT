@@ -2,7 +2,7 @@ this.list='';
 $(function(){
      console.log("init start");
 // 	$.ajax({
-// 		url:'https://rawgit.com/javahan13216100272/Zt-Page/master/json/itemList.json',
+// 		url:'https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json',
 // 		data:'',
 // 		dataType:'json',
 // 		type:'POST',
