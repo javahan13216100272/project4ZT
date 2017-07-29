@@ -1,7 +1,10 @@
 var list = '';
 $(function() {
 	if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+		console.log("移动端");
 		self.location.href("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/html/ZT_project4mobile.html")
+	}else{
+		console.log("PC端");
 	}
 	console.log("init start");
 	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
