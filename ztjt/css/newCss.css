@@ -25,15 +25,18 @@ html,body{margin: 0px;padding:0px;width: 100%;}
 }
 .queryBtn{
     height:35px;
-    background-color: lightgray;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: #ECECEC;
     border-radius: 5px;
+    border: 0;
 }
 .queryInfo{
     margin-top:15px;
     color:orange;
 }
 .tableDiv{
-    width: 60%;
+    //width: 60%;
     padding: 0 20%;
     display:block;
     text-align: center;
