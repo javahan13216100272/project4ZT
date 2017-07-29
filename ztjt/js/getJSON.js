@@ -1,5 +1,6 @@
 
 window.onload=function(){
+	console.log("window.onload");
     getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/itemList.json");
     //loadJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/itemList.json");
 }
