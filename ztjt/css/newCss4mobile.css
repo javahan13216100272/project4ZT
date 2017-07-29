@@ -1,0 +1,78 @@
+*{font-size: 14px;}
+html,body{margin: 0px;padding:0px;width: 100%;}
+.content{
+    padding:4% 1%;
+    display:block;
+    text-align: center;
+}
+.tbodytr:hover{
+    color:red;
+    cursor: pointer;
+}
+.queryMes{
+    margin-left: 1.5%;
+    font-size: 14px;
+    color: red;
+}
+.queryInput{
+    margin-right: 1.5%;
+    height:20px;
+    width: 20%;
+    border-radius: 1%;
+}
+.queryBtn{
+    height:20px;
+    background-color: lightgray;
+    border-radius: 0.5px;
+}
+.queryInfo{
+    margin-top:1.5%;
+    color:orange;
+}
+.tableDiv{
+    width: 60%;
+    padding: 0 20%;
+    display:block;
+    text-align: center;
+}
+.table{width:100%;}
+
+.theadtr{width:100%;}
+
+.tbodytr{width:100%;}
+
+.thname{
+    width: 25%;
+    text-align: center;
+}
+.thdes{
+    width: 35%;
+    text-align: center;
+}
+.thop{
+    width: 20%;
+    text-align: center;
+}
+.thnp{
+    width: 20%;
+    text-align: center;
+}
+
+.tdname{
+    padding-left: 4%;
+    width: 25%;
+    text-align: left;
+}
+.tddes{
+    padding-left: 4%;
+    width: 35%;
+    text-align: left;
+}
+.tdopriz{
+    width: 20%;
+    text-align: center;
+}
+.tdnpriz{
+    width: 20%;
+    text-align: center;
+}
