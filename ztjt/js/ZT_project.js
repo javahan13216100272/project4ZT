@@ -64,6 +64,7 @@ function replaceValue(str) {
 	return newStr;
 }
 function compare(keyWord) {
+	document.getElementsByClassName("queryInfo")[0].innerHTML = "";
 	document.getElementsByClassName("queryInfo")[0].innerHTML = "正在为您查询,请稍后...";
 	console.log("显示正在为你查询");
 	var arr = [];
@@ -119,6 +120,7 @@ function compare(keyWord) {
 	}
 	document.getElementsByClassName("queryContent")[0].appendChild(oFrag);
 	console.log("片段显示");
+	document.getElementsByClassName("queryInfo")[0].innerHTML = "";
 	if (arr.length == 0) {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "没有符合条件的记录!";
 	} else {
