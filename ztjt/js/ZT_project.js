@@ -65,10 +65,12 @@ function replaceValue(str) {
 }
 function compare(keyWord) {
 	document.getElementsByClassName("queryInfo")[0].innerHTML = "正在为您查询,请稍后...";
+	console.log("显示正在为你查询");
 	var arr = [];
 	var reg = new RegExp(replaceStr(keyWord));
 	if (keyWord == "") {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "";
+		console.log("显示空");
 		alert("查询的产品名称不能不填!");
 		return;
 	}
@@ -118,5 +120,6 @@ function compare(keyWord) {
 	} else {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "查询完毕, 符合条件的产品一共有<b style=\"color:red;padding-left:5px;padding-right:5px\">" + arr.length + "</b>件";
 	}
+	console.log("显示查询结果");
 	return arr;
 }
