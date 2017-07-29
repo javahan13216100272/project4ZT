@@ -11,6 +11,17 @@ $(function() {
 	document.getElementsByClassName("queryBtn")[0].onclick = function() {
 		compare(document.getElementsByClassName("queryInput")[0].value);
 	};
+	document.onkeyup = function (event) {
+            var e = event || window.event;
+            var keyCode = e.keyCode || e.which;
+            switch (keyCode) {
+                case 13:
+                    document.getElementsByClassName("queryBtn")[0].click();
+                    break;
+                default:
+                    break;
+            }
+        }
 	console.log("init finish");
 });
 function getJson(url) {
