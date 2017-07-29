@@ -23,6 +23,11 @@ $(function() {
                     break;
             }
         }
+	$(".help").eq(0).hover(function(){
+	    $(".help").eq(0).css("display","");
+	},function(){
+	    $(".help").eq(0).css("display","none");
+	});
 	console.log("init finish");
 });
 function getJson(url) {
@@ -64,7 +69,8 @@ function compare(keyWord) {
 	var arr = [];
 	var reg = new RegExp(replaceStr(keyWord));
 	if (keyWord == "") {
-		alert("查询的产品名称不能为空!");
+		document.getElementsByClassName("queryInfo")[0].innerHTML = "";
+		alert("查询的产品名称不能不填!");
 		return;
 	}
 	for (var i = 0; i < list.length; i++) {
