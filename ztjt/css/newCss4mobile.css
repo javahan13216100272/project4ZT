@@ -25,7 +25,9 @@ html,body{margin: 0px;padding:0px;width: 100%;}
 }
 .queryBtn{
     height:24px;
-    background-color: lightgray;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ECECEC;
     border-radius: 3px;
     border:0;
 }
