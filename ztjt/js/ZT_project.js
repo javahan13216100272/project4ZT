@@ -110,7 +110,7 @@ function compare(keyWord) {
 	if (arr.length == 0) {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "没有符合条件的记录!";
 	} else {
-		document.getElementsByClassName("queryInfo")[0].innerHTML = "搜索完毕, 符合条件的记录一共有<label style=\"color:red\">" + arr.length + "</label>条";
+		document.getElementsByClassName("queryInfo")[0].innerHTML = "搜索完毕, 符合条件的记录一共有<b style=\"color:red,padding-left:5px,padding-right:5px\">" + arr.length + "</b>条";
 	}
 	return arr;
 }
