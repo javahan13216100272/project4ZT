@@ -16,9 +16,12 @@ html,body{margin: 0px;padding:0px;width: 100%;}
 }
 .queryInput{
     margin-right: 15px;
+    padding-left:10px;
+    padding-right:10px;
     height:35px;
     width: 20%;
     border-radius: 10px;
+    border:1px solid #ECECEC
 }
 .queryBtn{
     height:35px;
