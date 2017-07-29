@@ -1,4 +1,4 @@
-this.list='';
+var list='';
 $(function(){
      console.log("init start");
 // 	$.ajax({
@@ -32,7 +32,7 @@ function getJson(url){
 		dataType:'json',
 		async:false,
 		success:function(data){
-			this.list=data;
+			list=data;
 		},
 		error:function(XMLHttpRequest, textStatus, errorThrown){
 			alert("数据请求错误,请刷新重试!");
@@ -71,7 +71,7 @@ function compare(keyWord){
     }
     for(var i=0;i<list.length;i++){
         var person=new Object();  
-        for(var item in this.list[i]){
+        for(var item in list[i]){
             if(replaceValue(list[i][item]).match(reg)){
                 person.name=list[i]["物料编码"];
                 person.des=list[i]["物料描述"]; 
