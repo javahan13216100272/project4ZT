@@ -3,22 +3,23 @@ $(function() {
 	console.log("init start");
 	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
 	document.getElementsByClassName("queryBtn")[0].onclick = function() {
-		compare(document.getElementsByClassName("queryInput")[0].value)
+		compare(document.getElementsByClassName("queryInput")[0].value);
 	};
-	console.log("init finish")
+	console.log("init finish");
 });
 function getJson(url) {
-	console.log('getJson') $.ajax({
+	console.log('getJson');
+	$.ajax({
 		url: url,
 		data: {},
 		type: 'GET',
 		dataType: 'json',
 		async: false,
 		success: function(data) {
-			list = data
+			list = data;
 		},
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
-			alert("数据请求错误,请刷新重试!")
+			alert("数据请求错误,请刷新重试!");
 		}
 	})
 }
@@ -32,13 +33,13 @@ function replaceStr(str) {
 	newStr = newStr.replace("?", "\\?");
 	newStr = newStr.replace(/\s+/g, "");
 	newStr = newStr.replace(" ", "");
-	return newStr
+	return newStr;
 }
 function replaceValue(str) {
 	var newStr = str.toUpperCase();
 	newStr = newStr.replace(/\s+/g, "");
 	newStr = newStr.replace(" ", "");
-	return newStr
+	return newStr;
 }
 function compare(keyWord) {
 	document.getElementsByClassName("queryContent")[0].innerHTML = "";
@@ -46,7 +47,7 @@ function compare(keyWord) {
 	var reg = new RegExp(replaceStr(keyWord));
 	if (keyWord == "") {
 		alert("查询的字符串不能为空!");
-		return
+		return;
 	}
 	for (var i = 0; i < list.length; i++) {
 		var person = new Object();
@@ -55,11 +56,11 @@ function compare(keyWord) {
 				person.name = list[i]["物料编码"];
 				person.des = list[i]["物料描述"];
 				person.oprize = list[i]["原开单价"];
-				person.nprize = list[i]["新开单价"]
+				person.nprize = list[i]["新开单价"];
 			}
 		}
 		if (person.name != undefined) {
-			arr.push(person)
+			arr.push(person);
 		}
 	}
 	var oFrag = document.createDocumentFragment();
@@ -86,13 +87,13 @@ function compare(keyWord) {
 		tr.appendChild(tddes);
 		tr.appendChild(tdopriz);
 		tr.appendChild(tdnpriz);
-		oFrag.appendChild(tr)
+		oFrag.appendChild(tr);
 	}
 	document.getElementsByClassName("queryContent")[0].appendChild(oFrag);
 	if (arr.length == 0) {
-		document.getElementsByClassName("queryInfo")[0].innerHTML = "没有符合条件的记录!"
+		document.getElementsByClassName("queryInfo")[0].innerHTML = "没有符合条件的记录!";
 	} else {
-		document.getElementsByClassName("queryInfo")[0].innerHTML = "搜索完毕, 符合条件的记录一共有<b>" + arr.length + "</b>条"
+		document.getElementsByClassName("queryInfo")[0].innerHTML = "搜索完毕, 符合条件的记录一共有<b>" + arr.length + "</b>条";
 	}
-	return arr
+	return arr;
 }
