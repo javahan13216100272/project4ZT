@@ -1,5 +1,8 @@
 var list = '';
 $(function() {
+	if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+		self.location.href("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/html/ZT_project4mobile.html")
+	}
 	console.log("init start");
 	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
 	document.getElementsByClassName("queryBtn")[0].onclick = function() {
