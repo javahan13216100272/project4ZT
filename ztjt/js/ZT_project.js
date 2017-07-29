@@ -9,6 +9,7 @@ $(function() {
 	console.log("init start");
 	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
 	document.getElementsByClassName("queryBtn")[0].onclick = function() {
+		document.getElementsByClassName("queryInfo")[0].innerHTML = "正在为您查询,请稍后...";
 		compare(document.getElementsByClassName("queryInput")[0].value);
 	};
 	document.onkeyup = function (event) {
