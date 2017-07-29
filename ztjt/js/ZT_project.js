@@ -10,6 +10,7 @@ $(function() {
 	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
 	document.getElementsByClassName("queryBtn")[0].onclick = function() {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "正在为您查询,请稍后...";
+// 		console.log("点击查询按钮,应显示正在为您查询");
 		compare(document.getElementsByClassName("queryInput")[0].value);
 	};
 	document.onkeyup = function (event) {
@@ -65,7 +66,6 @@ function replaceValue(str) {
 	return newStr;
 }
 function compare(keyWord) {
-	document.getElementsByClassName("queryContent")[0].innerHTML = "";
 	var arr = [];
 	var reg = new RegExp(replaceStr(keyWord));
 	if (keyWord == "") {
