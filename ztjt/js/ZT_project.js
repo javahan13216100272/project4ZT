@@ -76,7 +76,7 @@ function compare(keyWord) {
 		return;
 	}
 	for (var i = 0; i < list.length; i++) {
-		console.log("循环到",i);
+// 		console.log("循环到",i);
 		var person = new Object();
 		for (var item in list[i]) {
 			if (replaceValue(list[i][item]).match(reg)) {
