@@ -1,12 +1,12 @@
 
 window.onload=function(){
-    //getJson();
+    getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/itemList.json");
     loadJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/itemList.json");
 }
-function getJson(){
+function getJson(url){
     console.log('getJson')
     $.ajax({
-      url:'https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/itemList.json',
+      url:url,
       data:'',
       type:'POST',
       dataType:'json',
@@ -16,6 +16,7 @@ function getJson(){
 }
 function loadJson(url)
 {
+	console.log("loadJson:",url)
 	var xmlhttp;
 	if (window.XMLHttpRequest)
 	{
@@ -31,6 +32,7 @@ function loadJson(url)
 	{
 		if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
+			console.log("xmlhttp.responseText=",xmlhttp.responseText);
 			document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
 		}
 	}
