@@ -2,7 +2,7 @@ var list = '';
 $(function() {
 	if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
 		console.log("移动端");
-		this.location.href("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/html/ZT_project4mobile.html");
+		this.location.href="https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/html/ZT_project4mobile.html";
 	}else{
 		console.log("PC端");
 	}
