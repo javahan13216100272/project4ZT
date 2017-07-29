@@ -75,6 +75,7 @@ function compare(keyWord) {
 		return;
 	}
 	for (var i = 0; i < list.length; i++) {
+		console.log("循环到",i);
 		var person = new Object();
 		for (var item in list[i]) {
 			if (replaceValue(list[i][item]).match(reg)) {
@@ -89,6 +90,7 @@ function compare(keyWord) {
 		}
 	}
 	var oFrag = document.createDocumentFragment();
+	console.log("定义创建片段");
 	for (var item in arr) {
 		var tr = document.createElement("tr");
 		tr.className = "tbodytr";
@@ -113,8 +115,10 @@ function compare(keyWord) {
 		tr.appendChild(tdopriz);
 		tr.appendChild(tdnpriz);
 		oFrag.appendChild(tr);
+		console.log("添加tr");
 	}
 	document.getElementsByClassName("queryContent")[0].appendChild(oFrag);
+	console.log("片段显示");
 	if (arr.length == 0) {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "没有符合条件的记录!";
 	} else {
