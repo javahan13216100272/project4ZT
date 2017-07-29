@@ -1,7 +1,7 @@
 var list = '';
 $(function() {
 	if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
-		console.log("移动端");
+		console.log("跳转到移动端页面");
 		this.location.href="https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/html/ZT_project4mobile.html";
 	}else{
 		console.log("PC端");
@@ -9,8 +9,6 @@ $(function() {
 	console.log("init start");
 	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
 	document.getElementsByClassName("queryBtn")[0].onclick = function() {
-		document.getElementsByClassName("queryInfo")[0].innerHTML = "正在为您查询,请稍后...";
-// 		console.log("点击查询按钮,应显示正在为您查询");
 		compare(document.getElementsByClassName("queryInput")[0].value);
 	};
 	document.onkeyup = function (event) {
@@ -66,6 +64,7 @@ function replaceValue(str) {
 	return newStr;
 }
 function compare(keyWord) {
+	document.getElementsByClassName("queryInfo")[0].innerHTML = "正在为您查询,请稍后...";
 	var arr = [];
 	var reg = new RegExp(replaceStr(keyWord));
 	if (keyWord == "") {
