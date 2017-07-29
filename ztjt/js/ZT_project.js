@@ -15,7 +15,7 @@ $(function(){
 // 			console.log('error:','XMLHttpRequest.status=',XMLHttpRequest.status,'	XMLHttpRequest.readyState=',XMLHttpRequest.readyStateb,'textStatus:',textStatus);
 // 		}
 // 	})
-	getJson("https://rawgit.com/javahan13216100272/Zt-Page/master/json/itemList.json");
+	getJson("https://rawgit.com/javahan13216100272/project4ZT/master/ztjt/json/itemList.json");
     document.getElementsByClassName("queryBtn")[0].onclick=function(){
         compare(document.getElementsByClassName("queryInput")[0].value);
     };
