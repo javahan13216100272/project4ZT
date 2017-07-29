@@ -9,7 +9,7 @@ function getJson(url){
     $.ajax({
       url:url,
       data:{},
-      type:'POST',
+      type:'GET',
       dataType:'json',
       async:false,
       success:function(data){
