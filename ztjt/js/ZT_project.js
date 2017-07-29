@@ -63,7 +63,7 @@ function compare(keyWord) {
 	var arr = [];
 	var reg = new RegExp(replaceStr(keyWord));
 	if (keyWord == "") {
-		alert("查询的字符串不能为空!");
+		alert("查询的产品名称不能为空!");
 		return;
 	}
 	for (var i = 0; i < list.length; i++) {
@@ -110,7 +110,7 @@ function compare(keyWord) {
 	if (arr.length == 0) {
 		document.getElementsByClassName("queryInfo")[0].innerHTML = "没有符合条件的记录!";
 	} else {
-		document.getElementsByClassName("queryInfo")[0].innerHTML = "搜索完毕, 符合条件的记录一共有<b>" + arr.length + "</b>条";
+		document.getElementsByClassName("queryInfo")[0].innerHTML = "搜索完毕, 符合条件的记录一共有<label style="color:red">" + arr.length + "</label>条";
 	}
 	return arr;
 }
