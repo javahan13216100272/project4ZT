@@ -5,6 +5,16 @@ html,body{margin: 0px;padding:0px;width: 100%;}
     display:block;
     text-align: center;
 }
+.help:before{
+    margin-left:20px;
+    width:24px;
+    height:24px
+}
+.help:after{
+    margin-left:20px;
+    width:24px;
+    height:24px
+}
 .tbodytr:hover{
     color:red;
     cursor: pointer;
